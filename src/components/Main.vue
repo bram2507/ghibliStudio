@@ -1,6 +1,7 @@
 <template>
-	<div id="main">
-		<Card />
+	<div class="main_content">
+		<!-- <div class="main_content__title"></div> -->
+		<Card :film="film" v-for="(film, key) in films" :key="key" />
 	</div>
 </template>
 
@@ -60,13 +61,18 @@ export default {
 	margin: 0;
 	box-sizing: border-box;
 }
-#main {
+.main_content {
 	width: 100%;
 	min-height: 100vh;
 	background-color: #d4f1f4;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	justify-items: column;
+	flex-direction: column;
+}
+
+.main_content__title {
+	margin-top: 5vh;
+	margin-top: 5vh;
 }
 </style>
